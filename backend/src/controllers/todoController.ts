@@ -57,12 +57,6 @@ const edit_Todo = async (req: CustomRequest, res: Response) => {
   if (!user)
     return res.status(403).json({ error: true, message: "user need to login" });
 
-  if (!todoName && !dueDate && !priority) {
-    return res
-      .status(400)
-      .json({ error: true, message: "No changes Provided" });
-  }
-
   try {
     const todo = await Todo.findOne({ _id: todoID, author: user._id });
 

@@ -9,8 +9,8 @@ import {
 const router = Router();
 
 router.post("/create_todo", authenticateToken, create_Todo);
-router.put("/edit_todo", authenticateToken, edit_Todo);
+router.put("/edit_todo/:todoID", authenticateToken, edit_Todo);
 router.get("/get_todo", authenticateToken, get_Todo);
-router.get("/delete_todo", authenticateToken, delete_Todo);
+router.delete("/delete_todo/:todoID", authenticateToken, delete_Todo);
 
 export default router;
