@@ -1,5 +1,6 @@
 import jwt from "jsonwebtoken";
-require("dotenv").config();
+import dotenv from "dotenv";
+dotenv.config();
 import { Request, Response, NextFunction } from "express";
 export interface CustomRequest extends Request {
   id?: string;
