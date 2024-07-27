@@ -1,30 +1,113 @@
-# React + TypeScript + Vite
+# Full-Stack Todo Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a full-stack Todo application built using the MERN stack (MongoDB, ExpressJS, React, Node.js) with TypeScript. It allows users to perform CRUD operations on their todo items.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Backend**: Node.js with ExpressJS
+- **Frontend**: React with TypeScript
+- **Database**: MongoDB
+- **Authentication**: JWT (JSON Web Tokens)
+- **Hashing**: bcryptjs
+- **Environment Management**: dotenv
 
-## Expanding the ESLint configuration
+## Project Setup
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Backend
 
-- Configure the top-level `parserOptions` property like this:
+1.  **Clone the Repository**
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+    ```bash
+    git clone https://github.com/Derrick99234/Todo_Mern_App.git
+    cd todo-app/backend
+    ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2.  **Install Dependencies**
+
+        ```bash
+        npm install
+        ```
+
+    `
+
+3.  **Run the Backend**
+
+    ```bash
+    npx ts-node src/index.ts
+    ```
+
+4.  **API Endpoints**
+
+    - `POST /create_todo` - Create a new todo
+    - `PUT /edit_todo/:todoID` - Get all todos
+    - `GET /get_todo` - Get a todo by ID
+    - `DELETE /delte_todo/:todoID` - Delete a todo by ID
+
+### Frontend
+
+1. **Navigate to the Frontend Directory**
+
+   ```bash
+   cd ../frontend
+   ```
+
+2. **Install Dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the Frontend**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Usage**
+
+   - **Add Todo**: Click the "Add Todo" button to open the form and add a new todo.
+   - **Edit Todo**: Click on the "Edit" button next to a todo to modify it.
+   - **Delete Todo**: Click on the "Delete" button next to a todo to remove it from the list.
+
+## Code Structure
+
+### Backend
+
+- **`src/index.ts`**: Main entry point of the application.
+- **`src/controllers/todoController.ts`**: Contains the logic for handling requests related to todos.
+- **`src/models/todo.model..ts`**: Mongoose schema and model for todos.
+- **`src/routes/todoRoutes.ts`**: Defines routes for todos.
+- **`src/config/db.ts`**: Handles database connection.
+- **`src/middleware/verifyJWT.ts`**: Middleware for JWT authentication.
+
+## Development
+
+- **Backend**: Make sure MongoDB is running locally or provide a remote MongoDB URI in the `.env` file.
+- **Frontend**: Ensure the backend server is running to make API requests.
+
+## Contributing
+
+1. **Fork the Repository**
+2. **Create a Feature Branch**
+
+   ```bash
+   git checkout -b feature/your-feature
+   ```
+
+3. **Commit Your Changes**
+
+   ```bash
+   git commit -m "Add a descriptive commit message"
+   ```
+
+4. **Push to the Branch**
+
+   ```bash
+   git push origin feature/your-feature
+   ```
+
+5. **Create a Pull Request**
+
+## Contact
+
+For any questions or concerns, feel free to reach out to [pshubomi@email.com](mailto:pshubomi@gmail.com).
