@@ -2,6 +2,8 @@
 
 This project is a full-stack Todo application built using the MERN stack (MongoDB, ExpressJS, React, Node.js) with TypeScript. It allows users to perform CRUD operations on their todo items.
 
+# Hi ✋ i'm Olatunbosun a Full stack developer
+
 ## Tech Stack
 
 - **Backend**: Node.js with ExpressJS
