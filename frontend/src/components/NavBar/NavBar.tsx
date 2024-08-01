@@ -12,8 +12,8 @@ type NavBarProps = {
 const NavBar = ({ userData }: NavBarProps) => {
   const navigate = useNavigate();
   const onLogout = () => {
-    navigate("/login");
-    localStorage.clear();
+    navigate("/");
+    localStorage.removeItem("token");
   };
 
   return (
